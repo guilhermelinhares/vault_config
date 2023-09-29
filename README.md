@@ -1,6 +1,6 @@
 # Project description
-  The project consists in POC for configuration vault hashicorp with storage backend in postgres + integration keycloak with OIDC provider
-  The project is extension for another project, if you wanted follow this steps please see :https://github.com/guilhermelinhares/vault_ha
+  The project consists in POC for configuration vault hashicorp with storage backend in postgres + integration keycloak with OIDC provider</br>
+  The project is extension for another project, if you wanted follow this steps please see: https://github.com/guilhermelinhares/vault_ha
 
 
 ## Create policy for terraform apply
@@ -63,9 +63,9 @@ vault write auth/approle/role/terraform \
 
 Save the role-id and secret-id, this values must be pass in environment variables
 
-`vault read auth/approle/role/terraform/role-id`
+`vault read auth/approle/role/terraform/role-id`</br>
 `vault write -f auth/approle/role/terraform/secret-id`
 
 ### Export variables role-id and secret-id
-`export TF_VAR_login_approle_role_id=value`
+`export TF_VAR_login_approle_role_id=value`</br>
 `export TF_VAR_login_approle_secret_id=value`
