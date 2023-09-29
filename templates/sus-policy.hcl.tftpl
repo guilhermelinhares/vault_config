@@ -1,5 +1,5 @@
-%{ for apps in all_apps ~}
-path "${apps}/${env}/*"
+%{ for app in apps ~}
+path "${app}/${env}/*"
 {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
