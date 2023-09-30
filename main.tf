@@ -5,6 +5,10 @@ terraform {
       version = "3.20.1"
     }
   }
+  
+  backend "pg" {
+    conn_str = "postgres://localhost:5432/vault?sslmode=disable"
+  }
 }
 
 module "java" {

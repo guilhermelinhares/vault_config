@@ -2,6 +2,25 @@
   The project consists in POC for configuration vault hashicorp with storage backend in postgres + integration keycloak with OIDC provider</br>
   The project is extension for another project, if you wanted follow this steps please see: https://github.com/guilhermelinhares/vault_ha
 
+## Run Postgres Docker
+
+```hcl
+docker run -itd \
+	--name pg-vault \
+  -p 5432:5432 \
+	-e POSTGRES_PASSWORD=vault \
+  -e POSTGRES_DB=vault \
+  -e POSTGRES_USER=vault \
+	postgres
+```
+
+### Export Environments Postgres database
+```hcl
+export PGUSER=vault
+read -s PGPASSWORD
+export PGPASSWORD
+terraform init
+```
 
 ## Create policy for terraform apply
 
