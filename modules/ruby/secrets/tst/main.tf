@@ -31,6 +31,7 @@ data "template_file" "template_ruby_2" {
 }
 
 resource "vault_kv_secret_v2" "ruby_2" {
+  depends_on          = [data.template_file.template_ruby_2]
   mount               = var.apps_ruby[1]
   name                = "${var.apps_name_environments}"
   cas                 = 0
