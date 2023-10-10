@@ -5,5 +5,5 @@ variable "apps_ruby" {
 
 variable "apps_name_environments" {
   description = "Environments Aplications"
-  type        = string
+  type        = list(string)
 }
