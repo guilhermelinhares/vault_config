@@ -1,0 +1,6 @@
+%{ for env in envs ~}
+path "${app}/data/${env}*"
+{
+  capabilities = ["read","list"]
+}
+%{ endfor ~}

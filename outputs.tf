@@ -27,3 +27,7 @@ output "apps_sus_path" {
     for k, v in vault_kv_secret_v2.apps_sus : k => v.path
   }
 }
+
+output "exemplo-role-id" {
+  value = module.spring_boot.exemplo-role-id
+}

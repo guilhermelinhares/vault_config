@@ -1,5 +1,5 @@
-variable "apps_ruby" {
-  description = "Ruby Apps"
+variable "apps_spring_boot" {
+  description = "Spring Apps"
   type        = list(string)
 }
 
